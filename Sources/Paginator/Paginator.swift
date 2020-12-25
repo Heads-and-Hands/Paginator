@@ -119,7 +119,11 @@ public class Paginator {
         return publisher
             .receive(on: RunLoop.main)
             .sink(
-                receiveCompletion: { result in
+                receiveCompletion: { [weak self] result in
+                    defer {
+                        self?.request = nil
+                    }
+
                     guard case let .failure(error) = result else {
                         return
                     }
