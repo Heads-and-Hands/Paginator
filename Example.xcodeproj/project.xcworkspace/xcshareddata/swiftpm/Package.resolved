@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": null,
+          "revision": "eaf6e622dd41b07b251d8f01752eab31bc811493",
+          "version": "5.4.1"
+        }
+      },
+      {
+        "package": "NetworkLayer",
+        "repositoryURL": "https://github.com/Heads-and-Hands/NetworkLayer",
+        "state": {
+          "branch": null,
+          "revision": "d23a667067609a5b584d75225674861955eac7ec",
+          "version": "0.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
