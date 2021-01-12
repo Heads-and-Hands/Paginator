@@ -8,109 +8,110 @@ import Foundation
 public struct PageMetaInformation {
     // MARK: Public
 
-    public let nextPayload: PaginatorPagePayload?
     public let isLoadProgress: Bool
     public let error: PaginatorError?
     public let isFinished: Bool
     public let isFirstPage: Bool
     public let isLoadedEmptyPage: Bool
     public let refreshMode: RefreshMode?
+    
+    public var nextPayload: PaginatorPagePayload?
 
     // MARK: Internal
 
     static var initial: Self {
         PageMetaInformation(
-            nextPayload: nil,
             isLoadProgress: false,
             error: nil,
             isFinished: false,
             isFirstPage: true,
             isLoadedEmptyPage: false,
-            refreshMode: nil
+            refreshMode: nil,
+            nextPayload: nil
         )
     }
 
     func with(nextPayload: PaginatorPagePayload?) -> Self {
         PageMetaInformation(
-            nextPayload: nextPayload,
             isLoadProgress: isLoadProgress,
             error: error,
             isFinished: isFinished,
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
-            refreshMode: refreshMode
+            refreshMode: refreshMode,
+            nextPayload: nextPayload
         )
     }
 
     func with(isLoadProgress: Bool) -> Self {
         PageMetaInformation(
-            nextPayload: nextPayload,
             isLoadProgress: isLoadProgress,
             error: isLoadProgress ? nil : error,
             isFinished: isFinished,
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
-            refreshMode: refreshMode
+            refreshMode: refreshMode,
+            nextPayload: nextPayload
         )
     }
 
     func with(error: PaginatorError?) -> Self {
         PageMetaInformation(
-            nextPayload: nextPayload,
             isLoadProgress: isLoadProgress,
             error: error,
             isFinished: isFinished,
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
-            refreshMode: refreshMode
+            refreshMode: refreshMode,
+            nextPayload: nextPayload
         )
     }
 
     func with(isFinished: Bool) -> Self {
         PageMetaInformation(
-            nextPayload: nextPayload,
             isLoadProgress: isLoadProgress,
             error: error,
             isFinished: isFinished,
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
-            refreshMode: refreshMode
+            refreshMode: refreshMode,
+            nextPayload: nextPayload
         )
     }
 
     func with(isFirstPage: Bool) -> Self {
         PageMetaInformation(
-            nextPayload: nextPayload,
             isLoadProgress: isLoadProgress,
             error: error,
             isFinished: isFinished,
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
-            refreshMode: refreshMode
+            refreshMode: refreshMode,
+            nextPayload: nextPayload
         )
     }
 
     func with(isLoadedEmptyPage: Bool) -> Self {
         PageMetaInformation(
-            nextPayload: nextPayload,
             isLoadProgress: isLoadProgress,
             error: error,
             isFinished: isFinished,
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
-            refreshMode: refreshMode
+            refreshMode: refreshMode,
+            nextPayload: nextPayload
         )
     }
 
     func with(refreshMode: RefreshMode?) -> Self {
         PageMetaInformation(
-            nextPayload: nextPayload,
             isLoadProgress: isLoadProgress,
             error: error,
             isFinished: isFinished,
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
-            refreshMode: refreshMode
+            refreshMode: refreshMode,
+            nextPayload: nextPayload
         )
     }
 }
