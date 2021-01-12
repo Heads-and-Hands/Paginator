@@ -51,6 +51,10 @@ public class Paginator {
             publisher: makeRequest(payload).map { ($0.list, $0.meta) }.eraseToAnyPublisher()
         )
     }
+    
+    public func reduceOffset(by value: Int) {
+        currentPageMeta.nextPayload?.reduceOffset(by: value)
+    }
 
     // MARK: Private
 
