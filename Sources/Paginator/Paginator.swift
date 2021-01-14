@@ -71,7 +71,7 @@ public class Paginator {
     }
 
     private var isLoading: Bool {
-        !currentPageMeta.isFinished
+        currentPageMeta.isLoadProgress
     }
 
     private func prepare<Payload: PaginatorPagePayload>(
