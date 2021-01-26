@@ -10,4 +10,5 @@ public protocol PaginatorPagePayload: Encodable {
     func isFinished(pageMeta: PaginatorPageMeta) -> Bool
     
     mutating func reduceOffset(by: Int)
+    mutating func resetOffset()
 }
