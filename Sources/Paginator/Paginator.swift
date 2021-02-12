@@ -14,6 +14,10 @@ public class Paginator {
 
     // MARK: Public
 
+    public func nextPagePayload<Payload: PaginatorPagePayload>() -> Payload? {
+        currentPageMeta.nextPayload as? Payload
+    }
+
     public func nextPage<Payload: PaginatorPagePayload, Response: ApiClientResponse, Entity>(
         payload: Payload,
         refreshMode: RefreshMode?,
