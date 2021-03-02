@@ -166,6 +166,7 @@ public class Paginator {
                         .with(nextPayload: nextPayload)
                         .with(isFinished: finished)
                         .with(isLoadedEmptyPage: output.list.isEmpty)
+                        .with(additionalData: output.loadedMeta?.additionalData())
 
                     // Передача состояния успеха
                     updateBlock(output.list, completeMeta)
