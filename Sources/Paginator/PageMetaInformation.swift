@@ -14,6 +14,7 @@ public struct PageMetaInformation {
     public let isFirstPage: Bool
     public let isLoadedEmptyPage: Bool
     public let refreshMode: RefreshMode?
+    public let additionalData: PaginatorAdditionalData?
     
     public var nextPayload: PaginatorPagePayload?
 
@@ -27,6 +28,7 @@ public struct PageMetaInformation {
             isFirstPage: true,
             isLoadedEmptyPage: false,
             refreshMode: nil,
+            additionalData: nil,
             nextPayload: nil
         )
     }
@@ -39,6 +41,7 @@ public struct PageMetaInformation {
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
             refreshMode: refreshMode,
+            additionalData: additionalData,
             nextPayload: nextPayload
         )
     }
@@ -51,6 +54,7 @@ public struct PageMetaInformation {
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
             refreshMode: refreshMode,
+            additionalData: additionalData,
             nextPayload: nextPayload
         )
     }
@@ -63,6 +67,7 @@ public struct PageMetaInformation {
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
             refreshMode: refreshMode,
+            additionalData: additionalData,
             nextPayload: nextPayload
         )
     }
@@ -75,6 +80,7 @@ public struct PageMetaInformation {
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
             refreshMode: refreshMode,
+            additionalData: additionalData,
             nextPayload: nextPayload
         )
     }
@@ -87,6 +93,7 @@ public struct PageMetaInformation {
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
             refreshMode: refreshMode,
+            additionalData: additionalData,
             nextPayload: nextPayload
         )
     }
@@ -99,6 +106,7 @@ public struct PageMetaInformation {
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
             refreshMode: refreshMode,
+            additionalData: additionalData,
             nextPayload: nextPayload
         )
     }
@@ -111,6 +119,20 @@ public struct PageMetaInformation {
             isFirstPage: isFirstPage,
             isLoadedEmptyPage: isLoadedEmptyPage,
             refreshMode: refreshMode,
+            additionalData: additionalData,
+            nextPayload: nextPayload
+        )
+    }
+
+    func with(additionalData: PaginatorAdditionalData?) -> Self {
+        PageMetaInformation(
+            isLoadProgress: isLoadProgress,
+            error: error,
+            isFinished: isFinished,
+            isFirstPage: isFirstPage,
+            isLoadedEmptyPage: isLoadedEmptyPage,
+            refreshMode: refreshMode,
+            additionalData: additionalData,
             nextPayload: nextPayload
         )
     }
